@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>login</title>
+    <style>
+        body {
+            background-color: #1e1e2d;
+            font-family: Arial, sans-serif;
+        }
+        #login-box {
+            margin: 100px auto;
+            width: 300px;
+            padding: 20px;
+            background: #ffffff20;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00000050;
+            text-align: center;
+        }
+        input[type=text], input[type=password] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: #ffffff50;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #2563eb;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-box">
+        <form action="/Menu" method="get">
+            <h2>login</h2>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="login">
+        </form>
+    </div>
+</body>
+</html>
