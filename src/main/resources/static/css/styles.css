@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #bec2c6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #122e68;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.navigation a {
+    font-size: 1.0em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.navigation .animation {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background: #fff;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+.navigation .start-home::before,
+a:nth-child(1):hover~.animation {
+    width: 95px;
+    left: 770px;
+}
+
+a:nth-child(2):hover~.animation {
+    width: 160px;
+    left: 880px;
+}
+
+a:nth-child(3):hover~.animation {
+    width: 95px;
+    left: 1060px;
+}
+
+a:nth-child(4):hover~.animation {
+    width: 175px;
+    left: 1180px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+.trip-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-options label {
+    font-size: 16px;
+    color: #36649a;
+    font-weight: 500;
+}
+
+.trip-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.search-form {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #122e68;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #122e68;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 46px;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: #36649a;
+}
+
+.passenger-selection {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.passenger-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.passenger-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.passenger-control button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #122e68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.passenger-control input {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+button#passenger-dropdown {
+    text-align: left;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    position: relative;
+}
+
+button.confirm {
+    width: 100%;
+    background-color: #122e68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.confirm:hover {
+    background-color: #36649a;
+}
